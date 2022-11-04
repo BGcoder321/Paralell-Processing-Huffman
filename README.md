@@ -1,1 +1,1 @@
-# Paralell-Processing-Huffman
+# Parallel-Processing-Huffman
