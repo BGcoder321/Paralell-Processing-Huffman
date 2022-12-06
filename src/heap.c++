@@ -14,5 +14,7 @@ struct heap *makeHeap(void){
 }
 
 void freeHeap(struct heap *heap){
-    free()
+    free(heap->array);
+    free(heap);
 }
+
