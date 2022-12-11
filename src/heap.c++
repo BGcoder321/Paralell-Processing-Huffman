@@ -18,3 +18,6 @@ void freeHeap(struct heap *heap){
     free(heap);
 }
 
+void insert(struct heap *heap, struct node *){
+    
+}
