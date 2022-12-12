@@ -8,7 +8,7 @@
 
 struct heap *makeHeap(void){
     struct heap *newHeap = (struct heap *) malloc(sizeof(struct heap));
-    newHeap->array = (struct node **) calloc(length, (struct node *));
+    newHeap->array = (struct node **) calloc(length, sizeof(struct node *));
     newHeap->size = 0;
     return newHeap;
 }
@@ -24,12 +24,12 @@ void swap(struct heap *heap, int parentIndex, int childIndex){
     (heap->array)[childIndex] = temp;
 }
 
-void insert(struct heap *heap, struct node *){
-    (heap->array)[heap->size] = node;
+void insert(struct heap *heap, struct node *newNode){
+    (heap->array)[heap->size] = newNode;
     int child = heap->size;
     int parent = floor((child-1)/2);
-    while(parent->size != 0){
-        if( (heap->array)[parent]->weight > (heap->array)[child]->weight){
+    while(parent >= 0){
+        if( (heap->array)[parent]->freq > (heap->array)[child]->freq){
             swap(heap, parent, child);
             child = parent;
             parent = floor((child-1)/2);
