@@ -37,6 +37,7 @@ void insert(struct heap *heap, struct node *){
             break;
         }
     }
+    (heap->size)++;
 }
 
 void remove(struct heap*heap) {
