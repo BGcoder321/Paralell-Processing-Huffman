@@ -40,6 +40,12 @@ void insert(struct heap *heap, struct node *newNode){
     (heap->size)++;
 }
 
-void remove(struct heap*heap) {
-    //po po popopopoopo
+struct node remove(struct heap*heap) {
+    if(heap->size == 0){
+        return NULL;
+    }
+
+    swap(heap, 0, heap->size);
+    struct node *minVal = 
+
 }
